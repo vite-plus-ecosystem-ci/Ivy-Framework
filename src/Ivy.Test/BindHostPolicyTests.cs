@@ -193,7 +193,6 @@ public class BindHostPolicyTests
     }
 
     #endregion
-}
 
     #region Scheme / TLS - Explicit ServerArgs.UseTls
 
@@ -236,7 +235,7 @@ public class BindHostPolicyTests
     [InlineData(null, false)]
     public void UseTls_ArgsNull_DefersToEnvironment(string? ivyTls, bool expectedUseTls)
     {
-        var environment = new BindEnvironment(isContainer: false, hasPortEnv: false, ivyTls, isWindows: false);
+        var environment = new BindEnvironment(false, false, ivyTls, false);
         var useTls = BindHostPolicy.UseTls(environment, argsUseTls: null);
 
         Assert.Equal(expectedUseTls, useTls);
