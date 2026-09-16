@@ -37,3 +37,4 @@ package-lock.json
 
 # Worktree artifact (pnpm compatibility)
 .npmrc
+.vitest/
