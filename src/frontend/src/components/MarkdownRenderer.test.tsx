@@ -1,5 +1,5 @@
 import { renderToStaticMarkup } from "react-dom/server";
-import { describe, it, expect } from "vitest";
+import { describe, it, expect } from "vite-plus/test";
 import MarkdownRenderer from "@/components/MarkdownRenderer";
 
 describe("MarkdownRenderer math handling", () => {
